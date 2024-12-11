@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="icon" href="./../../assets/logo.png">
+    <link rel="stylesheet" href="./../../css/page/modelo.css">
+    <link rel="stylesheet" href="./../../css/page/datatables.css">
+    <title>MODELO</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./../../plugin/materialize/css/materialize.min.css">
+</head>
+
+<body>
+
+    <!--  MODAL FORM | INDEX-->
+    <div id="modal_formInsertUpdate" class="modal modal-fixed-footer">
+        <form id="form">
+            <div class="modal-content">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="nombre" name="nombre" type="text" class="validate">
+                        <label for="nombre">Nombre</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s4">
+                        <input id="inicio" name="inicio" type="time" class="validate">
+                        <label for="inicio">Entrada</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <input id="fin" name="fin" type="time" class="validate">
+                        <label for="fin">Salida</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <input id="tiempo" name="tiempo" type="time" class="validate">
+                        <label for="tiempo">Tiempo por hora clase</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <span class="col s12"><b>Receso(s):</b></span>
+                    <div class="input-field col s5">
+                        <input id="tiempo_receso" name="tiempo_receso" type="time" class="validate">
+                        <label for="tiempo_receso">Tiempo</label>
+                    </div>
+                    <div class="input-field col s5">
+                        <input id="hora_receso" name="hora_receso" type="number" class="validate">
+                        <label for="hora_receso">Hora clase</label>
+                    </div>
+                    <a id="receso_boton" class="waves-effect waves-light btn col s1">
+                        <i class="material-icons">save</i>
+                    </a>
+                    <table class="col s12">
+                        <thead>
+                            <th>Tiempo</th>
+                            <th>Despues de</th>
+                            <th>Accion</th>
+                        </thead>
+                        <tbody id="receso_rows"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a id="boton" class="waves-effect waves-light btn">
+                    <i class="material-icons">save</i>
+                </a>
+                <a href="#!" class="waves-effect waves-light btn modal-close">
+                    <i class="material-icons">cancel</i>
+                </a>
+            </div>
+        </form>
+    </div>
+    <!--  MODAL FORM | END-->
+    <!--  TOOLS | INDEX  -->
+    <div class="tools">
+        <span>Modelo Horario</span>
+        <a href="#modal_formInsertUpdate" class="waves-effect waves-light btn modal-trigger"><i class="material-icons">add</i></a>
+    </div>
+    <!--  TOOLS | END -->
+    <table class="responsive-table" id="myTable">
+        <thead>
+            <tr>
+                <th class="th-sm">Nombre</th>
+                <th class="th-sm">Receso(s)</th>
+                <th class="th-sm">Entrada</th>
+                <th class="th-sm">Salida</th>
+                <th class="th-sm">Tiempo hora</th>
+                <th class="th-sm">Accion</th>
+            </tr>
+        </thead>
+
+        <tbody id="data_rows"></tbody>
+    </table>
+
+</body>
+<script src="./../../plugin/materialize/js/materialize.min.js"></script>
+<script src="./../../plugin/data_tables/jQuery-3.3.1/jquery-3.3.1.min.js"></script>
+<script src="./../../plugin/data_tables/datatables.min.js"></script>
+<script src="./../../plugin/data_tables/datatables_config.js"></script>
+
+<script src="./../../js/model/connectionDao.js"></script>
+<script src="./../../js/model/modeloDao.js"></script>
+<script src="./../../js/control/page/modelo.js"></script></html>

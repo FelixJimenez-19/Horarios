@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" href="./../css/login.css">
+  <title>LOGIN</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./../plugin/materialize/css/materialize.min.css">
+</head>
+
+<body>
+  <form id="form">
+    <img src="./../assets/logo.png">
+    <input class='validate' type="text" name='user' placeholder="Usuario" />
+    <input class='validate' type='password' name='pass' placeholder="Contraseña" />
+    <br>
+    <div class="loader">
+      <div class="preloader-wrapper small active" id="loader">
+        <div class="spinner-layer spinner-green-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="gap-patch">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <input type='submit' value="Iniciar" class='col  s6 btn btn-small white black-text  waves-effect z-depth-1 y-depth-1'>
+  </form>
+</body>
+<script src="./../plugin/materialize/js/materialize.min.js"></script>
+
+<script src="./../js/model/connectionDao.js"></script>
+<script src="./../js/model/usuarioDao.js"></script>
+<script src="./../js/control/login.js"></script>

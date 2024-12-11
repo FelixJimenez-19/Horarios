@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" href="../css/panel.css">
+  <link rel="icon" href="./../assets/logo.png">
+  <title>ADMINISTRACION</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./../plugin/materialize/css/materialize.min.css">
+</head>
+
+<body>
+
+  <!-- LOAD | INDEX -->
+  <div id="content_load">
+    <div class="preloader-wrapper big active">
+      <div class="spinner-layer spinner-blue-only">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div>
+        <div class="gap-patch">
+          <div class="circle"></div>
+        </div>
+        <div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- LOAD | END -->
+
+  <input type="checkbox" id="tools_checkbox">
+  <div class="header">
+    <label class="menu">
+      <span class="title">
+        <i class="material-icons">school</i>
+        Dischedule</span>
+      <label for="tools_checkbox">
+        <i class="material-icons">menu</i>
+      </label>
+    </label>
+    <div class="profile">
+      <input type="checkbox" id="profile_checkbox">
+      <label for="profile_checkbox" id="profile_name">Administrador</label>
+      <div class="profile_options">
+        <a id="boton_perfil"><i class="material-icons">account_circle</i>Perfil</a>
+        <a id="boton_logout"><i class="material-icons">exit_to_app</i>Salir</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="tools">
+    <div class="option">
+      <label id="boton_usuario"><i class="material-icons">person</i>Cuentas</label>
+    </div>
+    <div class="option">
+      <input type="checkbox" id="option_checkbox1">
+      <label for="option_checkbox1">
+        <i class="material-icons">work</i>
+        Administrar
+        <i class="material-icons desp">keyboard_arrow_right</i>
+      </label>
+      <ul>
+        <li id="boton_periodo"><i class="material-icons">date_range</i>Periodos</li>
+        <li id="boton_formato"><i class="material-icons">insert_drive_file</i>Formatos</li>
+        <li id="boton_docente"><i class="material-icons">person</i>Docentes</li>
+        <li id="boton_carrera"><i class="material-icons">business_center</i>Carreras</li>
+        <li id="boton_ciclo"><i class="material-icons">perm_contact_calendar</i>Ciclos</li>
+        <li id="boton_paralelo"><i class="material-icons">home</i>Paralelos</li>
+        <li id="boton_materia"><i class="material-icons">book</i>Materias</li>
+      </ul>
+    </div>
+    <div class="option">
+      <label id="boton_horario"><i  class="material-icons">access_time</i>Horarios</label>
+    </div>
+  </div>
+
+  <div class="page">
+    <iframe id="contentPage" src=""></iframe>
+  </div>
+
+</body>
+<script src="./../plugin/materialize/js/materialize.min.js"></script>
+
+</html>
+<script src="./../js/control/panel.js"></script>

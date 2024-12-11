@@ -1,0 +1,148 @@
+.dataTables_wrapper .dataTables_length {
+    display: none;
+}
+
+.dataTables_wrapper .dataTables_length label {
+
+
+    display: inline-flex;
+    width: 150px;
+    height: auto;
+    margin: 10px;
+    color: rgba(0, 0, 0, 0.87) border: solid 40px green;
+
+
+}
+
+.dataTables_wrapper .dataTables_length .select-wrapper {
+
+    width: 50px;
+    height: 20px;
+    border: solid 1px;
+
+}
+
+.dataTables_length .select-wrapper .select-dropdown {
+    background: orange;
+    width: 50px;
+    height: 20px;
+    margin: 0px;
+    position: static;
+}
+
+.dataTables_wrapper .dataTables_length .select-wrapper ul {
+    background: pink;
+    padding: 0px;
+    margin: 0px;
+    width: 100% !important;
+    height: 200px !important;
+
+}
+
+.dataTables_wrapper .dataTables_length .select-wrapper .dropdown-content li {
+    background: blue;
+    width: 100% !important;
+    height: auto;
+
+}
+
+
+#myTable_filter {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: content-box;
+    width: auto;
+    border: solid 0px;
+    margin: 20px;
+    padding: 0px;
+    color: currentColor;
+    float: right;
+    height: 35px !important;
+}
+
+#myTable_filter label {
+    background: #26A69A;
+    font-family: sans-serif;
+    font-weight: none;
+    font-size: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 100%;
+    color: white;
+    margin: 0px;
+    padding: 0 0 0 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px 0 #000;
+}
+
+
+
+#myTable_filter input {
+    border-radius: 5px;
+    background: white;
+    color: black;
+    display: flex;
+    width: 250px;
+    height: 90%;
+    margin: 0px 0px 0px 10px;
+    padding: 0px 5px;
+    border-bottom: none;
+    border: solid 2px #26A69A;
+    font-family: sans-serif;
+}
+
+
+.dataTables_info {
+    margin: 10px 10px;
+    font-size: 100%;
+    text-align: center;
+    float: right;
+}
+
+
+.dataTables_paginate {
+    display: inline-flex;
+    align-items: center;
+    width: auto;
+    height: auto;
+    margin: 10px;
+
+
+}
+
+.dataTables_paginate .paginate_button {
+    color: black;
+
+}
+
+.dataTables_paginate #myTable_previous,
+.dataTables_paginate span a,
+.dataTables_paginate #myTable_next {
+    background: rgba(38, 166, 154);
+    margin: 10px 3px;
+    padding: 10px 17px;
+    color: #FFF;
+    border-radius: 7%;
+    cursor: pointer;
+    box-shadow: 0 1px 3px 0 #000;
+    transition: all 0.3s ease;
+}
+
+.dataTables_paginate #myTable_previous:hover,
+.dataTables_paginate span a:hover,
+.dataTables_paginate #myTable_next:hover {
+    background: #2BBBAD;
+}
+
+.responsive-table .th-sm {
+    width: auto !important;
+}
+
+.responsive-table tr {
+
+    
+}

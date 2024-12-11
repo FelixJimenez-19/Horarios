@@ -1,0 +1,1 @@
+ssh PROGRAMARTE@192.168.0.2 "d: & cd projects/node/horarios/api & npm run dev"

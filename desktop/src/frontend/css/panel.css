@@ -1,0 +1,272 @@
+:root {
+  --primary: #FFFFFF;
+  --secondary: #39B3E6;
+  --tertiary: #21292D;
+}
+
+@font-face {
+  src: url(fonts/Acme-Regular.ttf);
+  font-family: Acme-Regular;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  transition: all 0.3s ease;
+  color: var(--tertiary);
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* LOAD */
+#content_load {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: var(--primary);
+  z-index: 10000;
+}
+
+/*HEADER*/
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+  background-color: var(--secondary);
+  box-shadow: 1px 0 3px 1px #000000;
+}
+
+.header .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.header .menu .title {
+  user-select: none;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 100%;
+  font-family: Acme-Regular;
+  font-size: 2em;
+  margin: 0 10px 0 0;
+  box-shadow: 0 0 3px 0 var(--tertiary);
+}
+
+.header .menu .title i {
+  user-select: none;
+  margin: 0 5px 0 0;
+  padding: 0px;
+  font-size: 1.7em;
+}
+
+.header .menu .title i:hover {
+  background: rgba(0, 0, 0, 0);
+}
+
+.header .menu i {
+  user-select: none;
+  font-size: 2em;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.header .menu i:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.header .profile {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 200px;
+  height: 100%;
+}
+
+.header .profile label {
+  user-select: none;
+  margin: 0 30px 0 0;
+  padding: 8px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  color: var(--tertiary);
+  font-size: 1.1em;
+  font-family: Acme-Regular;
+}
+
+.header .profile label:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.header .profile .profile_options {
+  background: var(--tertiary);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 100%;
+  left: 100%;
+  border-radius: 0 0 0 5px;
+  width: 200px;
+  height: auto;
+}
+
+.header .profile input[type=checkbox] {
+  display: none;
+}
+
+.header .profile input[type=checkbox]:checked ~ .profile_options {
+  left: 0px;
+}
+
+.header .profile .profile_options a {
+  user-select: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+  color: var(--primary);
+}
+
+.header .profile .profile_options a:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.header .profile .profile_options a i {
+  user-select: none;
+  margin: 0 5px 0 10px;
+  color: var(--primary);
+}
+
+/*TOOLS*/
+.tools {
+  background: var(--tertiary);
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 65px 0 0 0 !important;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 100%;
+  z-index: 100;
+  box-shadow: 1px 0 3px 0 #000000;
+}
+
+#tools_checkbox {
+  display: none;
+}
+
+#tools_checkbox:checked ~ .header .menu .title {
+  width: 0px;
+}
+
+#tools_checkbox:checked ~ .tools {
+  left: -100%;
+}
+
+#tools_checkbox:checked ~ .page {
+  padding: 65px 0 0 0;
+}
+
+.tools .option {
+  display: flex;
+  flex-direction: column;
+}
+
+.tools .option input[type=checkbox] {
+  display: none;
+}
+
+.tools .option label,
+.tools .option ul li {
+  user-select: none;
+  display: flex;
+
+  align-items: center;
+  padding: 10px 15px;
+  font-size: 1.1em;
+  color: var(--primary);
+}
+
+.tools .option label i,
+.tools .option ul li i {
+  color: var(--primary);
+  font-size: 1.1em;
+  margin: 0 10px 0 0;
+}
+
+.tools .option label .desp,
+.tools .option ul li .desp {
+  display: block;
+  margin: 0 0 0 auto;
+}
+
+.tools .option label:hover,
+.tools .option ul li:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.tools .option ul {
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  overflow: hidden;
+  max-height: 0px;
+  height: 100%;
+}
+
+.tools .option ul li {
+  justify-content: flex-start;
+  width: 100%;
+  padding: 6px 5px 6px 30px;
+}
+
+.tools .option ul li i {
+  margin: 0 10px 0 0;
+}
+
+.tools .option input[type=checkbox]:checked ~ ul {
+  max-height: 400px;
+}
+
+.tools .option input[type=checkbox]:checked ~ label .desp {
+  transform: rotate(90deg);
+}
+
+/*PAGES : CONTENTS*/
+.page {
+  overflow: hidden;
+  padding: 65px 0 0 200px;
+  width: 100%;
+  height: 100%;
+}
+
+.page iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
